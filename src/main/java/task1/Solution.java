@@ -1,7 +1,9 @@
 package task1;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(String @NotNull [] args) {
         int n = Integer.parseInt(args[0]);
         int m = Integer.parseInt(args[1]);
 

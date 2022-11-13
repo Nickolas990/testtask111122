@@ -19,14 +19,14 @@ public class Solution {
             while (pointsReader.ready()) {
                 String[] xy = pointsReader.readLine().split(" ");
                 Point point = new Point(Float.parseFloat(xy[0]), Float.parseFloat(xy[1]));
-                System.out.print(distance(circle, point) + "\n");
+                System.out.print(isInCircle(circle, point) + "\n");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private static int distance(Circle circle, Point point) {
+    private static int isInCircle(Circle circle, Point point) {
         double dist = Math.sqrt(Math.pow(point.x - circle.x, 2) + Math.pow(point.y - circle.y, 2));
         return dist > circle.radius ? 2 : dist < circle.radius ? 1 : 0;
     }
