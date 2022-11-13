@@ -41,6 +41,7 @@ public class Solution {
         if (!report.createNewFile()) {
             report.delete();
             report.createNewFile();
+            System.out.println("report refreshed");
         }
         FileWriter writer = new FileWriter(report);
         writer.write(objectMapper
